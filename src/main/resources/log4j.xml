@@ -12,7 +12,7 @@
         <param name="Token" value="b54cc2ae-a9ae-4d86-98ec-6ecccefa86e8"/>
         <param name="Ssl" value="false"/>
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{EEE MMM dd HH:mm:ss ZZZ yyyy}, (%F:%L) %-5p: %m"/>
+            <param name="ConversionPattern" value="%d{EEE MMM dd HH:mm:ss ZZZ yyyy}, %-5p: %m"/>
         </layout>
     </appender>
 
