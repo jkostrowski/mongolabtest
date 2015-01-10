@@ -8,6 +8,14 @@
         </layout>
     </appender>
 
+    <appender name="LE" class="com.logentries.log4j.LogentriesAppender">
+        <param name="Token" value="b54cc2ae-a9ae-4d86-98ec-6ecccefa86e8"/>
+        <param name="Ssl" value="false"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{EEE MMM dd HH:mm:ss ZZZ yyyy}, (%F:%L) %-5p: %m"/>
+        </layout>
+    </appender>
+
     <logger name="org.apache">
         <level value="INFO"/>
     </logger>
@@ -15,9 +23,28 @@
     <root>
         <level value="INFO"/>
         <appender-ref ref="CA"/>
+        <appender-ref ref="LE"/>
     </root>
 
 </log4j:configuration>
+
+        <!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration debug="true">
+
+ <logger name="example">
+   <level value="debug"/>
+ </logger>
+
+   <root>
+     <priority value="debug"></priority>
+     <appender-ref ref="le"/>
+   </root>
+
+</log4j:configuration>
+        -->
+
 
 <!--
 
