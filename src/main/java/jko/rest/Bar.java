@@ -1,4 +1,4 @@
-package jko;
+package jko.rest;
 
 public class Bar {
     private final String msg;

@@ -1,5 +1,6 @@
-package jko;
+package jko.rest;
 
+import jko.mongo.Benchmark;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,13 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class IndexController {
+public class FooController {
 
-    @RequestMapping("/")
-    public Map<String,String> index() {
-        Map<String,String> map = new HashMap<String, String>();
-        map.put("Hello", "JKO");
-        map.put("Foo", "Bar");
-        return  map;
+    @RequestMapping("/foo")
+    public Map<String,Object> benchmark(@RequestParam(value="loops", defaultValue="100") String loops) {
+        return new Benchmark().run();
     }
 }
