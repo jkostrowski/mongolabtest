@@ -1,0 +1,7 @@
+---
+applications:
+  - name: mongotest
+    buildpack: java_buildpack
+    path: services/target/mongolabtest-0.1.0.jar
+    services:
+	
